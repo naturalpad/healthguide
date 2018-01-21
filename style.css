@@ -60,19 +60,24 @@ header, footer {
   flex: 0 0 auto;
   margin-left: 48px;
   margin-right: 48px;
-  align-items: center; }
-  header p, header h1, header h2, header h3, header h4, header h5, footer p, footer h1, footer h2, footer h3, footer h4, footer h5 {
-    color: #818181; }
+  align-items: center;
+  color: #818181; }
 
 header {
   height: 80px;
   position: relative; }
   header button {
-    z-index: 10;
     position: absolute;
     left: 0;
-    bottom: 50%;
-    transform: translate(0, 50%); }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  header .notification-group {
+    position: absolute;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
   header h1 {
     font-weight: bold;
     font-size: xx-large;
@@ -114,6 +119,13 @@ footer {
 .opaque {
   opacity: 1; }
 
+.js-trigger {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline; }
+  .js-trigger:hover, .js-trigger:active {
+    color: #000099; }
+
 button {
   text-transform: uppercase;
   font-size: xx-large;
@@ -130,11 +142,11 @@ button {
   user-select: none; }
   button:hover, button:focus {
     cursor: pointer;
-    background: #0092f1;
+    background: #00548b;
     outline: none;
     border: none; }
   button:active {
-    background: #00548b; }
+    background: #0092f1; }
 
 #home {
   display: flex;
