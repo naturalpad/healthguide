@@ -339,7 +339,6 @@ button {
     background-color: #168ead;
     transition: opacity 2s ease-in-out; }
     #app-exercise-stress-2 #splashscreen h1 {
-      flex: 0;
       display: flex;
       flex-direction: column;
       margin-left: 1em;
