@@ -238,37 +238,68 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-evenly; }
-    #home .carousel .content {
+    #home .carousel > .content {
       width: 70vw;
-      max-width: 50rem;
-      display: flex;
-      justify-content: center; }
-      #home .carousel .content .tiles {
+      display: flex; }
+      #home .carousel > .content .tiles {
         display: flex;
+        transform: translateX(-100vw);
         transition: transform 1s; }
-      #home .carousel .content .tile {
+      #home .carousel > .content .tile {
         width: 70vw;
-        margin: 0 15vw; }
-      #home .carousel .content .advice-wrapper {
+        margin: 0;
+        margin-right: 30vw; }
+        #home .carousel > .content .tile a {
+          color: #0a2d82; }
+      #home .carousel > .content .advice-wrapper {
         position: relative;
-        width: 70vw;
-        max-width: 50rem;
+        max-width: 60rem;
         margin: 0 auto; }
-      #home .carousel .content .advice {
+        #home .carousel > .content .advice-wrapper > img {
+          width: 100%;
+          height: 30rem; }
+      #home .carousel > .content .advice {
+        display: flex;
+        flex-direction: column;
         position: absolute;
-        padding: 5.5rem;
+        padding: 3rem;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         background-size: cover; }
-      #home .carousel .content img {
-        width: 100%;
-        height: 30rem; }
+        #home .carousel > .content .advice h2 {
+          text-align: center;
+          margin-bottom: 1rem; }
+        #home .carousel > .content .advice .content-wrapper {
+          flex: 1 0;
+          display: flex;
+          box-sizing: border-box;
+          position: relative; }
+          #home .carousel > .content .advice .content-wrapper div {
+            box-sizing: border-box;
+            flex: 0 1 50%; }
+            #home .carousel > .content .advice .content-wrapper div.img {
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat; }
+            #home .carousel > .content .advice .content-wrapper div.content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding-left: 2rem;
+              flex: 1 0 50%; }
+            #home .carousel > .content .advice .content-wrapper div p {
+              margin: .5rem;
+              text-align: justify;
+              white-space: pre-line; }
+          #home .carousel > .content .advice .content-wrapper img {
+            width: 100%; }
     #home .carousel .arrow {
       cursor: pointer;
       flex: 1 0;
-      text-align: center; }
+      text-align: center;
+      z-index: 10; }
       #home .carousel .arrow img {
         width: 4rem; }
       #home .carousel .arrow:first-child {
@@ -360,6 +391,15 @@ button {
       color: red; }
     #home .contact .form-info.sent {
       color: green; }
+
+@media (max-width: 900px) {
+  #home .content-wrapper .img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: .25; } }
 
 #assise {
   display: flex;
@@ -495,13 +535,13 @@ button {
         #douleur .selector .silhouette button.switch-gender {
           left: 3%;
           content: '';
-          background-image: url(images/douleur/bouton_femme.png); }
+          background-image: url(images/douleur/bouton_female.png); }
           #douleur .selector .silhouette button.switch-gender:hover {
-            background-image: url(images/douleur/bouton_femme_survole.png); }
+            background-image: url(images/douleur/bouton_female_survole.png); }
           #douleur .selector .silhouette button.switch-gender.male {
-            background-image: url(images/douleur/bouton_homme.png); }
+            background-image: url(images/douleur/bouton_male.png); }
             #douleur .selector .silhouette button.switch-gender.male:hover {
-              background-image: url(images/douleur/bouton_homme_survole.png); }
+              background-image: url(images/douleur/bouton_male_survole.png); }
   #douleur .conseils {
     padding: 1rem;
     flex: 1 0;
@@ -547,14 +587,16 @@ button {
 path {
   cursor: pointer;
   fill: transparent; }
+  path.shoulders {
+    cursor: auto; }
+    path.shoulders:hover {
+      fill: transparent; }
   path:hover {
-    fill: #2c49b1;
-    opacity: 0.5; }
-  path.displayed {
+    fill: #eee;
+    opacity: .6; }
+  path.selected {
     fill: #d3d62e;
     fill-opacity: .7;
-    stroke: #2c49b1;
-    stroke-width: .5px;
     opacity: 1; }
 
 .app-main {
